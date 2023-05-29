@@ -1,0 +1,290 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPyRZi1EkwvuswiMPHsMyeT",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/083davii/professor-pablo/blob/main/aula006\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "provaA = {'Andre': 8.5, 'Ana': 7.0, 'Chico': 6.5, 'Nubia': 10, 'Luana': 8}\n",
+        "provaB = {'Julio': 5.5, 'Aristides': 6.0, 'Sebastiana': 9.5, 'Camila': 10, 'João': 6}\n",
+        "\n",
+        "resultado_final={}\n",
+        "resultado_final.update(provaA)\n",
+        "resultado_final.update(provaB)\n",
+        "\n",
+        "resultado_final\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "m7ZWkYw9XOZP",
+        "outputId": "b4a3a8ca-91c2-41af-866c-0e3571da81ce"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'Andre': 8.5,\n",
+              " 'Ana': 7.0,\n",
+              " 'Chico': 6.5,\n",
+              " 'Nubia': 10,\n",
+              " 'Luana': 8,\n",
+              " 'Julio': 5.5,\n",
+              " 'Aristides': 6.0,\n",
+              " 'Sebastiana': 9.5,\n",
+              " 'Camila': 10,\n",
+              " 'João': 6}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 5
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "sorted(resultado_final,key =resultado_final.get) #ordenação crescente"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "eMc9PNghfgv8",
+        "outputId": "5dce0385-9506-44ce-f369-0c60ed2c9dee"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Julio',\n",
+              " 'Aristides',\n",
+              " 'João',\n",
+              " 'Chico',\n",
+              " 'Ana',\n",
+              " 'Luana',\n",
+              " 'Andre',\n",
+              " 'Sebastiana',\n",
+              " 'Nubia',\n",
+              " 'Camila']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 6
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "sorted(resultado_final,key =resultado_final.get, reverse= True)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "E19RdKndgdwV",
+        "outputId": "0b3ca5fe-8fe6-4d18-f112-75c1d2d3cf05"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Nubia',\n",
+              " 'Camila',\n",
+              " 'Sebastiana',\n",
+              " 'Andre',\n",
+              " 'Luana',\n",
+              " 'Ana',\n",
+              " 'Chico',\n",
+              " 'Aristides',\n",
+              " 'João',\n",
+              " 'Julio']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 7
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for nome, nota in resultado_final.items():\n",
+        "  print (f'{nome} ---- {nota}')\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Ql-oXov-gvba",
+        "outputId": "6cde4faf-a71e-4503-d5b3-24131d9f58c9"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Andre ---- 8.5\n",
+            "Ana ---- 7.0\n",
+            "Chico ---- 6.5\n",
+            "Nubia ---- 10\n",
+            "Luana ---- 8\n",
+            "Julio ---- 5.5\n",
+            "Aristides ---- 6.0\n",
+            "Sebastiana ---- 9.5\n",
+            "Camila ---- 10\n",
+            "João ---- 6\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "candidatos = list( resultado_final.keys())\n",
+        "\n",
+        "candidatos"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-g9_GytWhc__",
+        "outputId": "4fb65bd9-3456-468d-ee6b-b60c1e65b9e9"
+      },
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Andre',\n",
+              " 'Ana',\n",
+              " 'Chico',\n",
+              " 'Nubia',\n",
+              " 'Luana',\n",
+              " 'Julio',\n",
+              " 'Aristides',\n",
+              " 'Sebastiana',\n",
+              " 'Camila',\n",
+              " 'João']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 13
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "notas = list( resultado_final.values())\n",
+        "\n",
+        "notas"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "d97h_8L3iPiA",
+        "outputId": "4f7e791d-21dc-492c-dd1c-7929f1e7a0a2"
+      },
+      "execution_count": 40,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[8.5, 7.0, 6.5, 10, 8, 5.5, 6.0, 9.5, 10, 6]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 40
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def consultaNota(dicNotas, nome):\n",
+        "  if nome in dicNotas:\n",
+        "    return dicNotas[nome]\n",
+        "  else:\n",
+        "      return 'Candidatos Inexistente'\n"
+      ],
+      "metadata": {
+        "id": "cXK7ErhWi1I0"
+      },
+      "execution_count": 45,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "tzJYCLC6vT8x"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "nomeCandidato = input('Digite sua graça:')\n",
+        "notaCandidato = consultaNota(resultado_final, nomeCandidato)\n",
+        "print (notaCandidato)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "oW-nKUJJqJ8f",
+        "outputId": "0285e1cd-6368-45ae-af2e-44ecd3a7c42e"
+      },
+      "execution_count": 46,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite sua graça:maria\n",
+            "Candidatos Inexistente\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
